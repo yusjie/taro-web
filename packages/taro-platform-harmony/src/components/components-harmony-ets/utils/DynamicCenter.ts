@@ -1,6 +1,4 @@
-import { bindFocus, bindInstanceToNode, bindScrollTo, initComponentNodeInfo, TaroAny, TaroElement } from '@tarojs/runtime'
-
-import { bindAnimation } from './helper'
+import { bindFocus, bindScrollTo, initComponentNodeInfo, TaroAny, TaroElement } from '@tarojs/runtime'
 
 export class DynamicCenter {
 
@@ -27,9 +25,7 @@ export class DynamicCenter {
     // dynamicID 只是为了更新到精准的 node
     // 而为了让半编译模板中每个 node 都能响应 api 的调用，因此 initComponentNodeInfo、bindInstanceToNode 和各种 bindAttribute 都需要执行
     initComponentNodeInfo(component, node)
-    bindInstanceToNode(node, component)
     bindFocus(node)
-    bindAnimation(node)
     bindScrollTo(node, component)
 
     node._isCompileMode = true

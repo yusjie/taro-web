@@ -94,6 +94,7 @@ export function triggerAttributesCallback (node, attributeName) {
 }
 
 export function initComponentNodeInfo (node: TaroElement) {
+  node._nodeInfo = {}
   node._nodeInfo.eventMap = {}
   node._nodeInfo.promiseMap = {}
   node._nodeInfo.attributeCallback = {}
